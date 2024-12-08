@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Art Maker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-4xl font-bold mb-8 text-center">Pixel Art Maker</h1>
+        <div class="flex flex-col lg:flex-row gap-8">
+            <div class="lg:w-3/4">
+                <div class="bg-gray-800 rounded-lg p-4 shadow-lg">
+                    <canvas id="pixelCanvas" class="w-full h-auto bg-white"></canvas>
+                </div>
+            </div>
+            <div class="lg:w-1/4">
+                <div class="bg-gray-800 rounded-lg p-4 shadow-lg">
+                    <h2 class="text-2xl font-semibold mb-4">Tools</h2>
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <button id="pencilTool" class="tool-btn"><i class="fas fa-pencil-alt"></i> Pencil</button>
+                        <button id="eraserTool" class="tool-btn"><i class="fas fa-eraser"></i> Eraser</button>
+                        <button id="fillTool" class="tool-btn"><i class="fas fa-fill-drip"></i> Fill</button>
+                        <button id="eyedropperTool" class="tool-btn"><i class="fas fa-eye-dropper"></i> Eyedropper</button>
+                    </div>
+                    <div class="mb-4">
+                        <label for="colorPicker" class="block mb-2">Color</label>
+                        <input type="color" id="colorPicker" class="w-full h-10 rounded">
+                    </div>
+                    <div class="mb-4">
+                        <label for="gridSize" class="block mb-2">Grid Size</label>
+                        <input type="range" id="gridSize" min="8" max="64" value="32" class="w-full">
+                        <span id="gridSizeValue" class="block text-center mt-2">32 x 32</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <button id="clearBtn" class="btn bg-red-500 hover:bg-red-600"><i class="fas fa-trash-alt"></i> Clear</button>
+                        <button id="downloadBtn" class="btn bg-green-500 hover:bg-green-600"><i class="fas fa-download"></i> Download</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
